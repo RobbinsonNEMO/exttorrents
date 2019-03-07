@@ -4,7 +4,7 @@ ext({
     field:'seeders',//seeders, leechers, time_add, files_count, empty for best match
     order:'desc',//asc or desc
     page: 2,//page count, obviously
-    url: 'https://kat.cr',//changes site default url (https://kat.cr)
+    url: 'https://ext.to',//changes site default url (https://ext.to)
 },function(e, data){
     //will get the contents from
     //http://ext.to/json.php?q=test&field=seeders&order=desc&page=2
