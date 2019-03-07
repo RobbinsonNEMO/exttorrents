@@ -1,4 +1,14 @@
 var ext=require('ext-torrent')
-ext('test search',function(err, response){
-    console.log(err, response)
+ext({
+    q: 'test',//actual search term
+    field:'seeders',//seeders, leechers, time_add, files_count, empty for best match
+    order:'desc',//asc or desc
+    page: 2,//page count, obviously
+    url: 'https://kat.cr',//changes site default url (https://kat.cr)
+},function(e, data){
+    //will get the contents from
+    //http://ext.to/json.php?q=test&field=seeders&order=desc&page=2
+    if(e)
+        return console.log(e)
+    console.log(data)//actual json response
 })
